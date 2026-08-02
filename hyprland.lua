@@ -309,7 +309,7 @@ hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("zen-browser"))
 hl.bind(mainMod .. " + SHIFT + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + return", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd('virt-viewer --connect qemu:///system --attach'))
-hl.bind(mainMod .. " + S", hl.dsp.exec_cmd('virt-manager'))
+hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd('virt-manager'))
 hl.bind(mainMod .. " + O", hl.dsp.exec_cmd('obsidian --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform-hint=auto'))
 hl.bind(mainMod .. " + SHIFT + P", hl.dsp.exec_cmd("hyprlock"))
 hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("swaync-client -t -sw"))
@@ -358,10 +358,10 @@ hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO
     { locked = true, repeating = true })
 hl.bind("XF86AudioMute", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"),
     { locked = true, repeating = true })
--- hl.bind("XF86AudioMicMute", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"),
---     { locked = true, repeating = true })
--- hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%+"), { locked = true, repeating = true })
--- hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%-"), { locked = true, repeating = true })
+hl.bind("XF86AudioMicMute", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"),
+    { locked = true, repeating = true })
+hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%+"), { locked = true, repeating = true })
+hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%-"), { locked = true, repeating = true })
 
 -- Requires playerctl
 -- hl.bind("XF86AudioNext", hl.dsp.exec_cmd("playerctl next"), { locked = true })
