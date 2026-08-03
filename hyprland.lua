@@ -1,15 +1,3 @@
--- This is an example Hyprland Lua config file.
--- Refer to the wiki for more information.
--- https://wiki.hypr.land/Configuring/Start/
-
--- Please note not all available settings / options are set here.
--- For a full list, see the wiki
-
--- You can (and should!!) split this configuration into multiple files
--- Create your files separately and then require them like this:
--- require("myColors")
-
-
 ------------------
 ---- MONITORS ----
 ------------------
@@ -22,17 +10,14 @@ hl.monitor({
     scale    = "auto",
 })
 
-
 ---------------------
 ---- MY PROGRAMS ----
 ---------------------
 
--- Set programs that you use
 local terminal    = "/usr/bin/ghostty"
 local fileManager = "/usr/bin/thunar"
 local menu = "/sbin/walker"
 -- local menu        = "hyprlauncher", check this one out
-
 
 -------------------
 ---- AUTOSTART ----
@@ -58,7 +43,7 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("eww daemon & eww open statusbar")
     hl.exec_cmd("elephant & walker -gapplication-service")
     hl.exec_cmd("thunar --daemon")
-    hl.exec_cmd("/home/kasperw/.config/hypr/random-wallpaper.sh")
+    -- hl.exec_cmd("/home/kasperw/.config/hypr/random-wallpaper.sh")
 end)
 
 
@@ -70,16 +55,13 @@ end)
 
 hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "24")
-
 hl.env("XDG_SESSION_TYPE", "wayland")
 hl.env("XCURSOR_SIZE", "24")
-hl.env("QT_QPA_PLATFORMTHEME", "qt6ct # change to qt6ct if you have that")
+hl.env("QT_QPA_PLATFORMTHEME", "qt6ct") -- change to qt6ct if you have that
 hl.env("QT_STYLE_OVERRIDE", "Adwaita-Dark")
 hl.env("GTK_THEME", "Adwaita:dark")
 hl.env("XDG_CURRENT_DESKTOP", "Hyprland")
 hl.env("XDG_SESSION_DESKTOP", "Hyprland")
-
-
 
 -----------------------
 ----- PERMISSIONS -----
